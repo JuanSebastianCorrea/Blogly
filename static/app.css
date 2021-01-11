@@ -63,6 +63,20 @@ a:hover {
 	top: -35px;
 }
 
+.tag-cancel {
+	margin-left: 63px;
+	margin-right: 20px;
+}
+
+.new-post-btns-div button {
+	position: relative;
+	top: -160px;
+}
+
+#edit-tag-btn-form {
+	height: 0;
+}
+
 li {
 	list-style-type: none;
 }

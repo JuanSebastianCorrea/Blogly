@@ -14,6 +14,13 @@
 <p>
   <small>By {{ post.user.full_name }} on {{ post.friendly_date }}</small>
 </p>
+<p>
+  {% for tag in tags%}
+  {% if tag in post.tags %}
+   <a href="/tags/{{tag.id}}"> #{{tag.name}}</a>
+  {% endif %}
+  {% endfor%}
+</p>
 {% endfor %}
 
 {% endblock %}

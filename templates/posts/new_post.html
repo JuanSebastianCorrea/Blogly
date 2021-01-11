@@ -22,8 +22,20 @@
     </div>
   </div>
 
-  <div class="form-group row">
-    <div class="ml-auto mr-3">
+  
+
+  <div class="form-group row d-flex align-items-start">
+    {% for tag in tags%}
+    <div class="form-check col-sm-8">
+      <div class="container ml-5">
+        <input class="form-check-input d-inline" type="checkbox" value="{{tag.id}}" name="tags" id="tag_{{tag.id}}">
+        <label class="form-check-label" for="tag_{{tag.id}}">
+          {{tag.name}}
+        </label>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="col-sm-4 d-flex justify-content-end new-post-btns-div">
         <button class="btn btn-outline-danger"><a class="cancel-btn" href="/users/{{ user.id }}">Cancel</a>
         <button type="submit" class="btn btn-primary" formaction="/users/{{user.id}}/posts/new">Add</button>
     </div>

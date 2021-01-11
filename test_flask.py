@@ -21,7 +21,7 @@ class UserViewsTestCase(TestCase):
     """Tests for views for User."""
 
     def setUp(self):
-        """Add sample user and a sample post."""
+        """Add sample user."""
 
         User.query.delete()
 
@@ -77,8 +77,8 @@ class UserViewsTestCase(TestCase):
     # def test_delete_user(self):
     #     with app.test_client() as client:
     #         d1 = {"first-name": "Test", "last-name": "User", "img-url": "../static/user-solid.svg"}
-    #         d2 = {"first-name": "Test2", "last-name": "User2", "img-url": "../static/user-solid.svg"}
-    #         client.post("/users/new", data=d1, d2, follow_redirects=True)
+    #         
+    #         client.post("/users/new", data=d1, follow_redirects=True)
     #         html = resp.get_data(as_text=True)
 
     #         self.assertEqual(resp.status_code, 200)

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Create Tag
+{% endblock %}
+
+{% block content %}
+<h1>Create Tag</h1>
+<form action="/tags/new" method="POST">
+    <div class="mb-3 d-flex justify-content-center">
+        <label for="name" class="d-flex m-2">Name:</label>
+        <input type="text" class="form-control d-flex" id="name" name="name" placeholder="Enter tag name">
+    </div>
+    <button class="btn btn-outline-danger tag-cancel"><a class="cancel-btn" href="/tags">Cancel</a>
+    <button class="btn btn-primary">Add</button>
+</form>
+
+{% endblock%}
